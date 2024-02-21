@@ -17,7 +17,6 @@ $>
 
 The script will use the `datetime` library to format the date. The `datetime` library is a built-in Python library that allows you to work with dates and times.
 
-
 ## Usage
 
 This program requires Python 3.10
@@ -33,3 +32,4 @@ python3.10 format_ft_time.py | cat -e
 - [Python Scientific Notation](https://www.w3schools.com/python/ref_func_format.asp): to format the scientific notation
 - [Python Scientific Notation Explained](https://www.scaler.com/topics/python-scientific-notation/)
 - [f-strings](https://he-arc.github.io/livre-python/fstrings/index.html): to format the date
+- [Day of the month as decimal number](https://www.programiz.com/python-programming/datetime/strftime#:~:text=Day%20of%20the%20month%20as%20a%20decimal%20number.): to format the date
