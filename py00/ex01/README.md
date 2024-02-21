@@ -32,3 +32,4 @@ python3.10 format_ft_time.py | cat -e
 - [strftime method from datetime lib](https://www.w3schools.com/python/python_datetime.asp): to format the date
 - [Python Scientific Notation](https://www.w3schools.com/python/ref_func_format.asp): to format the scientific notation
 - [Python Scientific Notation Explained](https://www.scaler.com/topics/python-scientific-notation/)
+- [f-strings](https://he-arc.github.io/livre-python/fstrings/index.html): to format the date
