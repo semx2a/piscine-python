@@ -2,11 +2,24 @@
 
 ## PREAMBLE
 
-This project is a python bootcamp.
+This repo contains the 42 School Python "Piscine" (aka Bootcamp) for Data Science. The exercises are designed to help you understand the basics of Python and how to use it for data science.
 
-To run each app, I choose to use dockerisation for its ease of use and to make sure the apps run well on any machine.
-Each exercise comes with its own tester and a README to help you understand the scope of the exercise.
+Each exercise comes with its own tester (if applicable) and a README to help you understand the scope of the exercise, what I learned and my approach to solving them.
 
-## USAGE
+## STRUCTURE
+
+The exercises are divided into 4 main "days":
+
+- Day 00: Start
+- Day 01: Arrays
+- Day 02: DataTable
+- Day 03: OOP
+- Day 04: Dod
+
+## REFERENCES
+- [Python Documentation](https://docs.python.org/3/)
+- [W3Schools Python Tutorial](https://www.w3schools.com/python/)
+- [Python built-in functions](https://www.w3schools.com/python/python_ref_functions.asp)
+- [Python Data Types](https://www.w3schools.com/python/python_datatypes.asp)
 
 ## TROUBLESHOOTING
