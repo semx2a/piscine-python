@@ -43,4 +43,4 @@ If required, we can also define our own exceptions in Python. To learn more abou
 
 We can handle these built-in and user-defined exceptions in Python using try, except and finally statements. To learn more about them, visit Python try, except and finally statements.
 
-[^1]: [source](https://www.programiz.com/python-programming/exceptions)
+[^1]: [source: Python Built-in Exceptions](https://www.programiz.com/python-programming/exceptions)
