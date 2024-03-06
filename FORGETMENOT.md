@@ -1,8 +1,8 @@
-# WHAT I LEARNED
+# What I learned
 
 This document contains useful information that I learned while working with Python.
 
-## BUILT-IN EXCPETIONS
+## Built-in Exceptions
 
 Some of the common built-in exceptions in Python programming along with the error that cause them are listed below: [^1]
 
