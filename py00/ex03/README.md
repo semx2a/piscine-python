@@ -49,5 +49,3 @@ $>
 ```sh
 $ python tester.py | cat -e
 ```
-
-## References
