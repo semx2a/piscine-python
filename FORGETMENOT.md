@@ -4,7 +4,7 @@ This document contains useful information that I learned while working with Pyth
 
 ## BUILT-IN EXCPETIONS
 
-Some of the common built-in exceptions in Python programming along with the error that cause them are listed below:
+Some of the common built-in exceptions in Python programming along with the error that cause them are listed below: [^1]
 
 Exception | Cause of Error |
 --- | --- |
@@ -42,3 +42,5 @@ ZeroDivisionError | Raised when the second operand of division or modulo operati
 If required, we can also define our own exceptions in Python. To learn more about them, visit Python User-defined Exceptions.
 
 We can handle these built-in and user-defined exceptions in Python using try, except and finally statements. To learn more about them, visit Python try, except and finally statements.
+
+[^1]: [source](https://www.programiz.com/python-programming/exceptions)
