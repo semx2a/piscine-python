@@ -36,3 +36,12 @@ $> python whatis.py 14
 ```
 
 ## References
+
+- [Python Main Function - DigitalOcean](https://www.digitalocean.com/community/tutorials/python-main-function)
+- [The Ultimate Guide to Command Line Arguments in Python Scripts](https://moez-62905.medium.com/the-ultimate-guide-to-command-line-arguments-in-python-scripts-61c49c90e0b3#:~:text=In%20Python%2C%20command%2Dline%20arguments,arguments%20passed%20to%20the%20script.)
+- [python command line arguments in main, skip script name](https://stackoverflow.com/questions/19016702/python-command-line-arguments-in-main-skip-script-name)
+- [Python indexing and slicing](https://realpython.com/lessons/indexing-and-slicing/)
+- [Python Lambda](https://www.w3schools.com/python/python_lambda.asp)
+- [Python | Assertion Error](https://www.geeksforgeeks.org/python-assertion-error/)
+- [How to handle AssertionError in Python and find out which line or statement it occurred on?](https://stackoverflow.com/questions/11587223/how-to-handle-assertionerror-in-python-and-find-out-which-line-or-statement-it-o)
+- [Python casting](https://www.w3schools.com/python/python_casting.asp)
