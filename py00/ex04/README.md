@@ -35,6 +35,12 @@ AssertionError: more than one argument provided
 $> python whatis.py 14
 ```
 
+or
+
+```sh
+$> chmod +x tester.sh && ./tester.sh
+```
+
 ## References
 
 - [Python Main Function - DigitalOcean](https://www.digitalocean.com/community/tutorials/python-main-function)
