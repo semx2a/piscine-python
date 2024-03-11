@@ -4,8 +4,7 @@
 
 **Allowed functions :** sys or any other library that allows to receive the args
 
-This time you have to make a real autonomous program, with a main, which takes
-a single string argument and displays the sums of its upper-case characters, lower-case characters, punctuation characters, digits and spaces.
+This time you have to make a real autonomous program, with a main, which takes a single string argument and displays the sums of its upper-case characters, lower-case characters, punctuation characters, digits and spaces.
 
 - If None or nothing is provided, the user is prompted to provide a string.
 - If more than one argument is provided to the program, print an AssertionError.
@@ -38,3 +37,9 @@ $>
 ```
 
 ## References
+
+- [Python - Common String Operations - String Constants](https://docs.python.org/3/library/string.html)
+- [Python RegEx](https://www.w3schools.com/python/python_regex.asp)
+- [5 Best Ways to Count Numbers in Python String](https://blog.finxter.com/5-best-ways-to-count-the-number-of-spaces-in-a-python-string/#:~:text=The%20count()%20method%20in,count()%20on%20the%20string.)
+- [Python - Catching multiple excpetions](https://rollbar.com/blog/python-catching-multiple-exceptions/)
+- [Python Catching EOFError](https://stackoverflow.com/questions/74283683/eof-error-occurs-when-trying-to-give-a-user-input)
