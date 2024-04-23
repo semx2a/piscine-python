@@ -43,3 +43,5 @@ $>
 - [5 Best Ways to Count Numbers in Python String](https://blog.finxter.com/5-best-ways-to-count-the-number-of-spaces-in-a-python-string/#:~:text=The%20count()%20method%20in,count()%20on%20the%20string.)
 - [Python - Catching multiple excpetions](https://rollbar.com/blog/python-catching-multiple-exceptions/)
 - [Python Catching EOFError](https://stackoverflow.com/questions/74283683/eof-error-occurs-when-trying-to-give-a-user-input)
+- [Python - How to return multiple values](https://note.nkmk.me/en/python-function-return-multiple-values/)
+- [Unpack Tupe and List in Python](https://note.nkmk.me/en/python-tuple-list-unpack/)

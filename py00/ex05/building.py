@@ -3,7 +3,7 @@ import string
 import re
 
 
-def print_result(*args):
+def print_result(args: tuple):
     """Printing of formatted args into a string"""
 
     assert len(args) == 6, "An error occured"
@@ -18,6 +18,19 @@ def print_result(*args):
     print(result)
 
 
+def parse_text(text: str):
+    """Parses text into len values of different types of characters"""
+
+    characters = len(text)
+    uppercase = len(re.findall("[A-Z]", text))
+    lowercase = len(re.findall("[a-z]", text))
+    punctuation = len(re.findall("[" + string.punctuation + "]", text))
+    spaces = len(re.findall("[" + string.whitespace + "]", text))
+    digits = len(re.findall("[0-9]", text))
+
+    return characters, uppercase, lowercase, punctuation, spaces, digits
+
+
 def main(argv):
     try:
         assert len(argv) <= 2, \
@@ -29,16 +42,8 @@ def main(argv):
             # text = input("What is the text to count?\n")
         else:
             text = argv[1]
-
-        characters = len(text)
-        uppercase = len(re.findall("[A-Z]", text))
-        lowercase = len(re.findall("[a-z]", text))
-        punctuation = len(re.findall("[" + string.punctuation + "]", text))
-        spaces = len(re.findall("[" + string.whitespace + "]", text))
-        digits = len(re.findall("[0-9]", text))
-
-        print_result(characters, uppercase, lowercase, punctuation, spaces,
-                     digits)
+        
+        print_result(parse_text(text))
 
     except AssertionError as msg:
         print(f"AssertionError: {msg}")
