@@ -39,7 +39,7 @@ def main(argv):
         if len(argv) == 1:
             print("What is the text to count?\n")
             text = sys.stdin.readline()
-            # Uncomment below & comment top line to enable custom text input
+            # Alternative function
             # text = input("What is the text to count?\n")
         else:
             text = argv[1]
