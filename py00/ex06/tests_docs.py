@@ -1,6 +1,5 @@
-from ft_filter import ft_filter
-from filterstring import filterstring, parse_string, is_greater, \
-    not_printable, is_needle
+import ft_filter
+import filterstring as fs
 
 
 class color:
@@ -27,15 +26,15 @@ def main():
     print_title('ft_filter doc:')
     print(f'{ft_filter.__doc__}\n')
     print_title('filterstring doc:')
-    print(f'{filterstring.__doc__}\n')
+    print(f'{fs.filterstring.__doc__}\n')
     print_title('parse_string doc:')
-    print(f'{parse_string.__doc__}\n')
+    print(f'{fs.parse_string.__doc__}\n')
     print_title('is_greater doc:')
-    print(f'{is_greater.__doc__}\n')
+    print(f'{fs.is_greater.__doc__}\n')
     print_title('not_printable doc:')
-    print(f'{not_printable.__doc__}\n')
+    print(f'{fs.not_printable.__doc__}\n')
     print_title('is_needle doc:')
-    print(f'{is_needle.__doc__}\n')
+    print(f'{fs.is_needle.__doc__}\n')
 
     return 0
 

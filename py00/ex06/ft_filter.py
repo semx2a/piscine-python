@@ -1,7 +1,7 @@
-from typing import Any, Callable, Iterable, T
+import typing as t
 
 
-def ft_filter(func: Callable[[T], Any], iterable: Iterable[T]):
+def ft_filter(func: t.Callable[[t.T], t.Any], iterable: t.Iterable[t.T]):
     """filter(function or None, iterable) --> filter object
 
 Return an iterator yielding those items of iterable for which function(item)
