@@ -44,6 +44,7 @@ $>
 ```
 
 ## References
+
 - [Python List Comprehension](https://www.w3schools.com/python/python_lists_comprehension.asp)
 - [Python Filter() function](https://www.w3schools.com/python/ref_func_filter.asp)
 - [Python Lambda](https://www.w3schools.com/python/python_lambda.asp)
