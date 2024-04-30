@@ -40,7 +40,6 @@ NESTED_MORSE = {" ": "/ ",
 
 
 def encrypt(message: str):
-
     encrypted_message = str()
     for char in message:
         encrypted_message += NESTED_MORSE[char.upper()]
@@ -48,7 +47,6 @@ def encrypt(message: str):
 
 
 def main(argv):
-
     try:
         assert len(argv) == 2, "wrong number of arguments"
         assert all(chr.isalnum() or chr == ' ' for chr in argv[1]), \
