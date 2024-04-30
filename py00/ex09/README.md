@@ -64,3 +64,5 @@ print(count_in_list(["toto", "tata", "toto"], "tutu")) # output: 0
 - [Writing PyProject TOML](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/)
 - [Hatch's documentation](https://hatch.pypa.io/latest/)
 - [Structuring your Python Project](https://docs.python-guide.org/writing/structure/)
+- [SampleMod](https://github.com/navdeep-G/samplemod)
+- [Setup For Humans](https://github.com/kennethreitz/setup.py)
