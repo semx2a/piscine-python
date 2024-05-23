@@ -12,7 +12,7 @@ The function must copy the function tqdm with the yield operator.
 Here's how it should be prototyped:
 
 ```python
-def ft_tqdm(lst: range) -> None:
+def ft_tqdm(lst: range) -> None:`
  pass
 ```
 
