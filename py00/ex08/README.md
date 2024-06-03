@@ -42,3 +42,7 @@ $> python tester.py
 ## References
 
 - [Python range() function](https://www.programiz.com/python-programming/methods/built-in/range)
+- [Python os.get_terminal_size()](https://www.w3schools.com/python/ref_os_get_terminal_size.asp#:~:text=Python%20os.,-get_terminal_size()%20Method&text=get_terminal_size()%20return%20the%20size,the%20terminal%20window%20in%20characters.)
+- [Progress Bar in Python](https://www.geeksforgeeks.org/progress-bars-in-python/)
+- [Display numbers with leading zeros](https://stackoverflow.com/questions/134934/display-number-with-leading-zeros)
+- [Padding a string in Python](https://www.geeksforgeeks.org/add-padding-to-a-string-in-python/)

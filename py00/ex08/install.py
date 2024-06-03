@@ -38,7 +38,7 @@ def main():
                                              stderr=subprocess.STDOUT)
         except subprocess.CalledProcessError as e:
             assert False, f"An error occurred while running the file: {str(e)}"
-        
+
         missing_modules = get_missing_modules(output)
 
         if missing_modules:
