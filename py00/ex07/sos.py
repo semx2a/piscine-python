@@ -40,6 +40,7 @@ NESTED_MORSE = {" ": "/ ",
 
 
 def encrypt(message: str):
+    """encrypts message into morse code."""
     encrypted_message = str()
     for char in message:
         encrypted_message += NESTED_MORSE[char.upper()]

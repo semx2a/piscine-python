@@ -8,3 +8,4 @@ print()
 for elem in tqdm(range(333)):
     sleep(0.005)
 print()
+print(tqdm.__doc__)
