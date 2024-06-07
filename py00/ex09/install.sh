@@ -9,8 +9,5 @@ then
 exit 1
 fi
 
-pip show twine 1>&/dev/null
-if [ $? -ne 0 ]
-then
-	python3 -m pip install twine
-fi
+python3 setup.py sdist
+pip install ./dist/ft_package-0.0.1.tar.gz

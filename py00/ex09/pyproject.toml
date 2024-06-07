@@ -1,27 +1,19 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "ft_package"
-version = "2024.0.0a1"
-dependencies = [
-	"count_in_list == 0.0.4"
-]
-requires-python = "3.10.13"
+version = "0.0.1"
+requires-python = ">=3.10"
 authors = [
 	{name = "Semiha Beyazkilic", email = "seozcan@student.42.fr"}
 ]
 maintainers = [
 	{name = "Semiha Beyazkilic", email = "seozcan@student.42.fr"}
 ]
-description = "Learning Python Packaging"
+description = "A sample test package"
 readme = "README.md"
-license = {file = "LICENSE"}
+license={text = "MIT"}
 classifiers = [
-	"Development Status :: 3 - Alpha",
-	"Programming Language :: Python 3.10.13"
 ]
-
-[project.urls]
-Repository = "https://www.github.com/semx2a/piscine-python"
