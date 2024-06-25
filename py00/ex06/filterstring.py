@@ -4,7 +4,8 @@ from ft_filter import ft_filter
 
 
 def is_needle(haystack: str):
-    """is_needle() returns haystack needle type lambda."""
+    """is_needle() returns a lambda function to test if needle is in
+haystack."""
     return lambda needle: needle in haystack
 
 
