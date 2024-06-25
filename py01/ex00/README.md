@@ -44,4 +44,4 @@ $> python tester.py
 ```
 
 ## Resources
-- 
+- [Create Your Own ufunc](https://www.w3schools.com/python/numpy/numpy_ufunc_create_function.asp)
