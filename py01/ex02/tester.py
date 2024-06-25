@@ -9,8 +9,9 @@ def main(argv):
     except Exception as e:
         print(f"{e}")
         return 1
-    
+
     return 0
+
 
 if __name__ == "__main__":
     main(sys.argv)
