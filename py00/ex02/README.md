@@ -5,12 +5,14 @@
 Write a function that prints the object types and returns 42.
 
 Here’s how it should be prototyped:
+
 ```python
 def all_thing_is_obj(object: any) -> int:
 #your code here
 ```
 
 Your tester.py:
+
 ```python
 from find_ft_type import all_thing_is_obj
 ft_list = ["Hello", "tata!"]
@@ -27,6 +29,7 @@ print(all_thing_is_obj(10))
 ```
 
 Expected output:
+
 ```sh
 $>python tester.py | cat -e
 List : <class 'list'>$
@@ -42,7 +45,7 @@ Type not found$
 ## Usage
 
 ```sh
-$ python tester.py | cat -e
+$>python tester.py | cat -e
 ```
 
 ## References

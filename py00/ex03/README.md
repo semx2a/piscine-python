@@ -47,5 +47,5 @@ $>
 ## Usage
 
 ```sh
-$ python tester.py | cat -e
+$>python tester.py | cat -e
 ```
