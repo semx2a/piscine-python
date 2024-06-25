@@ -47,3 +47,4 @@ My new shape is: (1, 2)
 ## Resources
 
 - [Numpy Array Shape](https://www.w3schools.com/python/numpy/numpy_array_shape.asp)
+- [Numpy Array Slicing](https://www.w3schools.com/python/numpy/numpy_array_slicing.asp)
