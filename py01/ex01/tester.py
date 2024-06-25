@@ -13,12 +13,12 @@ def main():
     try:
         test_choice = 0
 
-        while test_choice != 4:
+        while test_choice != 100:
             print('What test would you like to run?\n'
                   '1. Mandatory test\n'
                   '2. Extended test\n'
                   '3. Test with bigger family\n'
-                  '4. Exit\n'
+                  '100. Exit\n'
                   'Enter your choice: ', end='', flush=True)
 
             test_choice = int(input())
@@ -33,6 +33,8 @@ def main():
                 test(family, 0, 2)
                 test(family, 1, -2)
                 if test_choice == 2:
+                    test(None, None, None)
+                    test([], None, None)
                     test(family, None, 1)
                     test(family, 1, None)
                     test(family, 2, 4)
@@ -50,6 +52,8 @@ def main():
                           [1.82, 79.2],
                           [1.75, 69.8]]
 
+                test(None, None, None)
+                test([], None, None)
                 test(family, None, 1)
                 test(family, 1, None)
                 test(family, 0, 2)
@@ -59,7 +63,6 @@ def main():
                 test(family, 4, 8)
                 test(family, 5, 10)
                 test(family, 6, 10)
-
             else:
                 return 0
 
