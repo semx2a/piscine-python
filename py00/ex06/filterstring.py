@@ -63,6 +63,7 @@ def main(argv):
 
     except AssertionError as msg:
         print(f"AssertionError: {msg}")
+        exit(1)
 
 
 if __name__ == "__main__":

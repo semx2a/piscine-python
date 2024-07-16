@@ -3,7 +3,7 @@ import string
 import re
 
 
-def print_result(args: tuple):
+def build_result(args: tuple):
     """Printing of formatted args into a string"""
 
     assert len(args) == 6, "An error occured"
@@ -13,9 +13,9 @@ def print_result(args: tuple):
     result += f"{args[2]} lower letters\n"
     result += f"{args[3]} punctuation marks\n"
     result += f"{args[4]} spaces\n"
-    result += f"{args[5]} digits\n"
+    result += f"{args[5]} digits"
 
-    print(result)
+    return result
 
 
 def parse_text(text: str):
@@ -44,7 +44,7 @@ def main(argv):
         else:
             text = argv[1]
 
-        print_result(parse_text(text))
+        print(build_result(parse_text(text)))
 
     except AssertionError as msg:
         print(f"AssertionError: {msg}")
@@ -52,6 +52,7 @@ def main(argv):
 
     except (EOFError, KeyboardInterrupt):
         print("No data provided to input function")
+        exit(1)
 
 
 if __name__ == "__main__":

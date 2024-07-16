@@ -1,50 +1,51 @@
 import sys
 
-NESTED_MORSE = {" ": "/ ",
-                "A": ".- ",
-                "B": "_... ",
-                "C": "-.-. ",
-                "D": "-.. ",
-                "E": ". ",
-                "F": "..-. ",
-                "G": "--. ",
-                "H": ".... ",
-                "I": ".. ",
-                "J": ".--- ",
-                "K": "-.- ",
-                "L": ".-.. ",
-                "M": "-- ",
-                "N": "-. ",
-                "O": "--- ",
-                "P": ".--. ",
-                "Q": "--.- ",
-                "R": ".-. ",
-                "S": "... ",
-                "T": "- ",
-                "U": "..- ",
-                "V": "...- ",
-                "W": ".-- ",
-                "X": "-..- ",
-                "Y": "-.-- ",
-                "Z": "--.. ",
-                "1": ".---- ",
-                "2": "..--- ",
-                "3": "...-- ",
-                "4": "....- ",
-                "5": "..... ",
-                "6": "-.... ",
-                "7": "--... ",
-                "8": "---.. ",
-                "9": "----. ",
-                "0": "----- "}
+NESTED_MORSE = {" ": "/",
+                "A": ".-",
+                "B": "-...",
+                "C": "-.-.",
+                "D": "-..",
+                "E": ".",
+                "F": "..-.",
+                "G": "--.",
+                "H": "....",
+                "I": "..",
+                "J": ".---",
+                "K": "-.-",
+                "L": ".-..",
+                "M": "--",
+                "N": "-.",
+                "O": "---",
+                "P": ".--.",
+                "Q": "--.-",
+                "R": ".-.",
+                "S": "...",
+                "T": "-",
+                "U": "..-",
+                "V": "...-",
+                "W": ".--",
+                "X": "-..-",
+                "Y": "-.--",
+                "Z": "--..",
+                "1": ".----",
+                "2": "..---",
+                "3": "...--",
+                "4": "....-",
+                "5": ".....",
+                "6": "-....",
+                "7": "--...",
+                "8": "---..",
+                "9": "----.",
+                "0": "-----"}
 
 
-def encrypt(message: str):
+def encrypt(message: str) -> str:
     """encrypts message into morse code."""
-    encrypted_message = str()
+    morse_code = []
     for char in message:
-        encrypted_message += NESTED_MORSE[char.upper()]
-    print(encrypted_message)
+        if char.upper() in NESTED_MORSE:
+            morse_code.append(NESTED_MORSE[char.upper()])
+    return ' '.join(morse_code)
 
 
 def main(argv):
@@ -53,7 +54,7 @@ def main(argv):
         assert all(chr.isalnum() or chr == ' ' for chr in argv[1]), \
             "only alphanumeric characters are allowed"
 
-        encrypt(argv[1])
+        print(encrypt(argv[1]))
 
     except AssertionError as msg:
         print(f'AssertionError: {msg}')

@@ -19,7 +19,7 @@ try:
     scientific_notation = "{:.2e}".format(delta_in_seconds)
     # print results
     print(f"Seconds since {formated_epoch}: {seconds_formated} or \
-          {scientific_notation} in scientific notation")
+{scientific_notation} in scientific notation")
     print(formated_today)
 except Exception as e:
     print(f"Error: {e}")
