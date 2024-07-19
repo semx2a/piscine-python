@@ -1,4 +1,4 @@
-import ft_filter
+from ft_filter import ft_filter
 import filterstring as fs
 
 
