@@ -81,4 +81,4 @@ Inverts the colors of the image received.
 - [Understanding image filters with Pyton] (https://deepnote.com/app/gabriele-tazzari-4ac1/Understanding-image-filters-with-Python-d6d7ff84-29f0-4466-a6f0-c5c3dc05345f)
 - [ How to do image processing in Python](https://dataheadhunters.com/academy/how-to-do-image-processing-in-python-step-by-step-guide/)
 - [OpenCV: Detect whether a window is close. Or close by press 'x' button](https://medium.com/@mh_yip/opencv-detect-whether-a-window-is-closed-or-close-by-press-x-button-ee51616f7088)
- 
+- [Negative transformation of an image using Python and OpenCV](https://www.tutorialspoint.com/negative-transformation-of-an-image-using-python-and-opencv)
