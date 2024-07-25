@@ -30,3 +30,6 @@ The `load()` function takes a single parameter path, which is a string containin
 
 - [Pandas](https://pandas.pydata.org/)
 - [Dataset](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)
+- [Pandas CSV reader](https://www.w3schools.com/python/pandas/pandas_csv.asp)
+- [Pandas DataFrame shape](https://stackoverflow.com/questions/13921647/python-dimension-of-data-frame)
+- [Pandas Exceptions](https://stackoverflow.com/questions/64302419/what-are-all-of-the-exceptions-that-pandas-read-csv-throw)
