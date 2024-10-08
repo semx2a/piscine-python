@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    tester_pimp_image.py                               :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: seozcan <seozcan@student.42.fr>            +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/10/08 16:34:20 by seozcan           #+#    #+#              #
-#    Updated: 2024/10/08 16:56:50 by seozcan          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 from load_image import ft_load
 from pimp_image import ft_invert, ft_red, ft_green, ft_blue, ft_grey
 
