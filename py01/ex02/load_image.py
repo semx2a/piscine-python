@@ -10,8 +10,14 @@ def ft_load(path: str) -> np.array:
             return image_array
     except FileNotFoundError:
         print(f'File not found: {path}')
+        raise
+    except ValueError:
+        print(f'Unsupported format: {path}')
+        raise
     except Image.UnidentifiedImageError:
         print(f'Invalid image file: {path}')
+        raise
     except Exception as e:
         print(f'Exception: {e}')
+        raise
     return None
