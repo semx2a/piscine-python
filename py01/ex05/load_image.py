@@ -6,7 +6,7 @@ def ft_load(path: str) -> np.array:
     """
     Loads an image and returns it as a numpy array
 
-    Parameters: 
+    Parameters:
     path (string): the path of the image to be rotated.
 
     Return value:

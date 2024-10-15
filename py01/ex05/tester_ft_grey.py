@@ -18,6 +18,7 @@ def test_ft_grey_runs_without_errors(path):
     except Exception as e:
         pytest.fail(f"ft_grey raised an exception: {e}")
 
+
 @pytest.mark.parametrize('path', [
     '../assets/animal.jpeg',
     '../assets/cat_ok.jpg',
