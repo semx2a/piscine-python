@@ -4,7 +4,7 @@
 
 | Program name | `zoom.py` |
 | ------------ | --------- |
-File to turn in | `load_image.py` `zoom.py` |
+|File to turn in | `load_image.py` `zoom.py` |
 | Allowed functions | all libs for loading, manipulating, displaying image and table manipulation |
 
 ## Instructions

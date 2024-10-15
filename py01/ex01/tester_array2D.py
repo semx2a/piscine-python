@@ -29,7 +29,7 @@ import pytest
       [2.10, 98.5],
       [1.88, 75.2]],
      3, 6,
-     [[1.88, 75.2]])  # family[3:6] (6 is out of range, so it takes till the end)
+     [[1.88, 75.2]])  # family[3:6] (6 is out of range, so it includes the end)
 ])
 def test_slice_me_ok(family, start, end, expected):
     assert slice_me(family, start, end) == expected

@@ -34,5 +34,6 @@ $>
 ```
 
 ## References
+
 - [Matrix Transpose using Nested Loop](https://www.programiz.com/python-programming/examples/transpose-matrix)
 - [How do I create an empty array and then append to it in NumPy?](https://stackoverflow.com/questions/568962/how-do-i-create-an-empty-array-and-then-append-to-it-in-numpy)

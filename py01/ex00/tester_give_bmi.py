@@ -29,7 +29,7 @@ def main():
         test(height, weight)
 
     except Exception as msg:
-        print(f'Exception: {msg}')
+        exit(f'Exception: {msg}')
     return 0
 
 

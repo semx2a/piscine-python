@@ -11,7 +11,10 @@ inversion filter"""
         if len(image.shape) == 3 and image.shape[2] == 4:
             r, g, b, a = np.split(image, 4, axis=2)
             rgb_image = np.concatenate((r, g, b), axis=2)
-            negative_img = 255 - rgb_image
+            negative_rgb = 255 - rgb_image
+            # Reintegrate alpha channel to keep size identical to source file
+            negative_img = np.concatenate((negative_rgb, a), axis=2)
+
         else:
             negative_img = 255 - image
 
@@ -20,7 +23,7 @@ inversion filter"""
         plt.show()
 
     except Exception as e:
-        print(f'Exception as {e}')
+        exit(f'Exception as {e}')
 
     return negative_img
 
@@ -40,7 +43,7 @@ red filter"""
         plt.show()
 
     except Exception as e:
-        print(f'Exception: {e}')
+        exit(f'Exception: {e}')
 
     return red_img
 
@@ -59,7 +62,7 @@ green filter"""
         plt.show()
 
     except Exception as e:
-        print(f'Exception: {e}')
+        exit(f'Exception: {e}')
 
     return green_img
 
@@ -78,7 +81,7 @@ blue filter"""
         plt.show()
 
     except Exception as e:
-        print(f'Exception: {e}')
+        exit(f'Exception: {e}')
 
     return blue_img
 
@@ -87,6 +90,7 @@ def ft_grey(image: np.array) -> np.array:
     """ft_grey takes an array representation of an image to apply a
 red filter"""
     try:
+        assert len(image.shape) >= 3, 'invalid input image'
         # Grayscale conversion formula: Y = 0.299*R + 0.587*G + 0.114*B
         grey_img = np.dot(image[..., :3], [0.2989, 0.5870, 0.1140])
 
@@ -95,6 +99,6 @@ red filter"""
         plt.show()
 
     except Exception as e:
-        print(f'Exception: {e}')
+        exit(f'Exception: {e}')
 
     return grey_img

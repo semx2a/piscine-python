@@ -1,47 +1,51 @@
-import sys
-import os
-from load_image import ft_load
 import numpy as np
-from matplotlib import pyplot
+import matplotlib.pyplot as plt
+
+from load_image import ft_load
 
 
-def rgb2gray(rgb):
-    return np.dot(rgb[..., :3], [0.299, 0.587, 0.144])
+def rgb2gray(rgb) -> np.array:
+    """
+    Turns a RGB image to Grayscale
+
+    Parameters:
+    rgb (np.array): the 2D numpy array representation of the image.
+
+    Return value:
+    np.array: the 2D numpy array representation of the grayscale image.
+    """
+    return np.dot(rgb[..., :3], [0.2989, 0.5870, 0.1440])
 
 
 def ft_zoom(path: str):
+    """
+    Zooms on an image.
 
+    Parameters:
+    path (string): the path of the image to be rotated.
+
+    Return value:
+    np.array: The zoomed image as a 2D numpy array
+    """
     try:
-        racoon_img = ft_load(path)
-        print(racoon_img)
-        racoon_img = rgb2gray(racoon_img)  # converting image to grescale
-        racoon_img = racoon_img[100:500, 450:850]  # slicing image to zoom
+        img = ft_load(path)
+        print(img)
 
-        print(f"New shape after slicing: {racoon_img.shape}")
-        print(racoon_img)
+        img = rgb2gray(img)  # converting image to grescale
 
-        pyplot.imshow(racoon_img, cmap=pyplot.get_cmap('gray'))
-        pyplot.show()
+        h, w = img.shape  # unpacking image height and width
+        zh, zw = 400, 400  # setting image final size
+        eh = round((h - zh) // 2)
+        ew = round((w - zw) // 2)  # computing margins
+
+        # slicing numpy array to apply 'zoom'
+        img_out = img[eh:eh + zh, ew:ew + zw]
+
+        print(f"New shape after slicing: {img_out.shape}")
+        print(img_out)
+
+        plt.imshow(img_out, cmap=plt.get_cmap('gray'))
+        plt.show()
 
     except Exception as e:
-        print(f'Exception: {e}')
-
-
-def main():
-    try:
-        ft_zoom("../assets/animal.jpeg")
-    except Exception as e:
-        print(f"Excpetion: {e}")
-        return 1
-    return 0
-
-
-if __name__ == "__main__":
-    try:
-        main()
-    except KeyboardInterrupt:
-        print("Interrupted")
-        try:
-            sys.exit(130)
-        except SystemExit:
-            os._exit(130)
+        exit(f'Exception: {e}')
