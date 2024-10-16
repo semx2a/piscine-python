@@ -1,4 +1,4 @@
-name: Run Unit Test via Pytest and Lint with flake8 
+name: Pytest and flake8 
   
 on: [push]  
   
