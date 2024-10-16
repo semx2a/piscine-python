@@ -18,8 +18,13 @@ jobs:
       - name: Install dependencies  
         run: |  
           python -m pip install --upgrade pip  
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi  
           pip install coverage pytest flake8-github
+      - name: Install requirements
+        run: |
+          for req_file in $(find . -name 'requirements.txt'); do
+          echo "Installing dependencies from $req_file"
+          pip install -r $req_file
+          done  
       - name: Lint with flake8  
         run: |  
           flake8 . --format=github  
