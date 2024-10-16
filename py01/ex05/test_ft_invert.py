@@ -1,16 +1,22 @@
 import pytest
+import os
 from PIL import ImageChops
 from PIL import Image
 from pimp_image import ft_invert
 from load_image import ft_load
 
 
+# Determine the absolute path to the assets directory
+current_dir = os.path.dirname(os.path.abspath(__file__))
+assets_dir = os.path.join(current_dir, '../assets')
+
+
 @pytest.mark.parametrize('path', [
-    '../assets/animal.jpeg',
-    '../assets/cat_ok.jpg',
-    '../assets/giphy.webp',
-    '../assets/image.png',
-    '../assets/landscape.jpg'
+    os.path.join(assets_dir, 'animal.jpeg'),
+    os.path.join(assets_dir, 'cat_ok.jpg'),
+    os.path.join(assets_dir, 'image.png'),
+    os.path.join(assets_dir, 'landscape.jpg'),
+    os.path.join(assets_dir, 'giphy.webp')
 ])
 def test_ft_invert_runs_without_errors(path):
     try:
@@ -21,11 +27,11 @@ def test_ft_invert_runs_without_errors(path):
 
 
 @pytest.mark.parametrize('path', [
-    '../assets/animal.jpeg',
-    '../assets/cat_ok.jpg',
-    '../assets/giphy.webp',
-    '../assets/image.png',
-    '../assets/landscape.jpg'
+    os.path.join(assets_dir, 'animal.jpeg'),
+    os.path.join(assets_dir, 'cat_ok.jpg'),
+    os.path.join(assets_dir, 'image.png'),
+    os.path.join(assets_dir, 'landscape.jpg'),
+    os.path.join(assets_dir, 'giphy.webp')
 ])
 def test_ft_invert_output_dimensions(path):
     img = ft_load(path)
@@ -36,11 +42,11 @@ def test_ft_invert_output_dimensions(path):
 
 
 @pytest.mark.parametrize('path', [
-    '../assets/animal.jpeg',
-    '../assets/cat_ok.jpg',
-    '../assets/giphy.webp',
-    '../assets/image.png',
-    '../assets/landscape.jpg'
+    os.path.join(assets_dir, 'animal.jpeg'),
+    os.path.join(assets_dir, 'cat_ok.jpg'),
+    os.path.join(assets_dir, 'image.png'),
+    os.path.join(assets_dir, 'landscape.jpg'),
+    os.path.join(assets_dir, 'giphy.webp')
 ])
 def test_ft_invert_output_is_inverted(path):
     img = ft_load(path)

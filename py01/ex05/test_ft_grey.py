@@ -1,15 +1,21 @@
 import pytest
+import os
 import numpy as np
 from pimp_image import ft_grey
 from load_image import ft_load
 
 
+# Determine the absolute path to the assets directory
+current_dir = os.path.dirname(os.path.abspath(__file__))
+assets_dir = os.path.join(current_dir, '../assets')
+
+
 @pytest.mark.parametrize('path', [
-    '../assets/animal.jpeg',
-    '../assets/cat_ok.jpg',
-    '../assets/giphy.webp',
-    '../assets/image.png',
-    '../assets/landscape.jpg'
+    os.path.join(assets_dir, 'animal.jpeg'),
+    os.path.join(assets_dir, 'cat_ok.jpg'),
+    os.path.join(assets_dir, 'image.png'),
+    os.path.join(assets_dir, 'landscape.jpg'),
+    os.path.join(assets_dir, 'giphy.webp')
 ])
 def test_ft_grey_runs_without_errors(path):
     try:
@@ -20,11 +26,11 @@ def test_ft_grey_runs_without_errors(path):
 
 
 @pytest.mark.parametrize('path', [
-    '../assets/animal.jpeg',
-    '../assets/cat_ok.jpg',
-    '../assets/giphy.webp',
-    '../assets/image.png',
-    '../assets/landscape.jpg'
+    os.path.join(assets_dir, 'animal.jpeg'),
+    os.path.join(assets_dir, 'cat_ok.jpg'),
+    os.path.join(assets_dir, 'image.png'),
+    os.path.join(assets_dir, 'landscape.jpg'),
+    os.path.join(assets_dir, 'giphy.webp')
 ])
 def test_ft_grey_output_type(path):
     img = ft_load(path)
