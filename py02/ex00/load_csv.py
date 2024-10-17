@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 
 
@@ -13,15 +14,30 @@ def load(path: str) -> pd.DataFrame:
     """
     try:
         # Load csv data into a dataframe
+        if os.path.exists(path) is False:
+            raise FileNotFoundError(f'Could not find file {path}')
+
+        if path.endswith('.csv') is False:
+            raise ValueError('Make sure your file is a CSV file.')
+
         dataframe = pd.read_csv(path)
-        if dataframe.isnull().values.any():
-            raise ValueError("CSV file contains malformed rows")
+        if dataframe.empty is True:
+            raise pd.errors.EmptyDataError
         print(f'Loading dataset of dimensions {dataframe.shape}')
         return dataframe
 
     except pd.errors.EmptyDataError:
-        exit(f"Error: The file {path} is empty.")
+        print(f"Error: The file {path} is empty.")
+        raise
     except pd.errors.ParserError:
-        exit(f"Error: The file {path} contains invalid data.")
+        print(f"Error: The file {path} contains invalid data.")
+        raise
+    except ValueError as ve:
+        print(ve)
+        raise
+    except FileNotFoundError as fnf:
+        print(fnf)
+        raise
     except Exception as e:
-        exit(f'Exception: {e}')
+        print(f'Exception: {e}')
+        raise

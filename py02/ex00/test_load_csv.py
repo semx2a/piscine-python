@@ -24,16 +24,37 @@ def test_load_runs_without_errors(path):
 
 @pytest.mark.parametrize('path', [
     os.path.join(wrong_data,
-                 'income_per_gdpcapita_ppp_inflation_adjusted.xlsx'),
+                 'income_per_person_gdppercapita_ppp_inflation_adjusted.csv'),
+])
+def test_load_invalid_data(path):
+    with pytest.raises(pd.errors.ParserError):
+        assert load(path) is None
+
+
+@pytest.mark.parametrize('path', [
+    os.path.join(wrong_data, 'empty.csv'),
     os.path.join(wrong_data, 'invalid_data.csv'),
     os.path.join(wrong_data, 'char.csv'),
-    os.path.join(wrong_data, 'empty.csv'),
-    'README.md',
-    '',
-    ' '
 ])
-def test_load_runs_with_errors(path):
-    with pytest.raises((SystemExit,
-                        pd.errors.EmptyDataError,
-                        pd.errors.ParserError)):
-        load(path)
+def test_load_empty_data(path):
+    with pytest.raises(pd.errors.EmptyDataError):
+        assert load(path) is None
+
+
+@pytest.mark.parametrize('path', [
+    os.path.join(current_dir, 'README.md'),
+    os.path.join(wrong_data,
+                 'income_per_person_gdppercapita_ppp_inflation_adjusted.xlsx')
+
+])
+def test_load_wrong_filetype(path):
+    with pytest.raises(ValueError):
+        assert load(path) is None
+
+
+@pytest.mark.parametrize('path', [
+    os.path.join(current_dir, 'doesntexist.txt'),
+])
+def test_load_file_not_found(path):
+    with pytest.raises(FileNotFoundError):
+        assert load(path) is None
