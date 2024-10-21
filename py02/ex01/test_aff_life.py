@@ -12,15 +12,15 @@ from aff_life import life_expectancy
     'Russia',
     'Palestine',
     'China',
-    'Turkey'
+    'Turkey',
+    'Dominica'
 ])
-def life_expectancy_runs_without_errors(country):
-    life_expectancy(country)
+def test_life_expectancy_runs_without_errors(country):
+    assert life_expectancy(country) is None
 
 
 @pytest.mark.parametrize('country', [
     'Isnotreal'
 ])
-def life_expectancy_no_entry(country):
-    with pytest.raises(Exception):
-        life_expectancy(country)
+def test_life_expectancy_no_entry(country):
+    assert life_expectancy(country) is None

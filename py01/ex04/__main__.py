@@ -9,7 +9,7 @@ def main(av):
         assert len(av) == 2, "usage: __main__.py path/to/image"
         ft_rotate(av[1])
     except Exception as e:
-        print(f"Excpetion: {e}")
+        print(f"Exception: {e}")
         return 1
     return 0
 
