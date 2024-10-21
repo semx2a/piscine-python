@@ -1,4 +1,4 @@
-# Exercise 1: Draw my country
+# Exercise 1: Compare my country
 
 ## Description
 
@@ -33,4 +33,6 @@ The exercise explicitely states that the loaded file should be the `population_t
 For this reason, any other file will be considered invalid, resulting in the function's behavior being undefined.
 
 ## References
-
+- [How to convert number abbreviations](https://stackoverflow.com/questions/63722278/how-to-convert-number-abbreviation-1-70-m-1-600-b-2-1m-into-integers-in-py)
+- [How to create a multiline plot using seaborn](https://stackoverflow.com/questions/52308749/how-do-i-create-a-multiline-plot-using-seaborn)
+-

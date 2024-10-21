@@ -110,7 +110,7 @@ def render_plot(pop_over_years: pd.DataFrame, country_names: list) -> None:
     plt.show()
 
 
-def population_total(test_country: str, compare_country: str) -> None:
+def gdp_life_expectancy(year: str) -> None:
     """
     `population_total` function loads the population_total.csv file and
     displays the total population of the selected countries. Manually changing
@@ -130,74 +130,54 @@ def population_total(test_country: str, compare_country: str) -> None:
     None: the function returns None in all cases
     """
     try:
-        path = (os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                             '../data/population_total.csv'))
-        df = load(path)
+        abs_path = os.path.dirname(os.path.abspath(__file__))
 
-        if df is None:
-            raise RuntimeError(f'Data could not be loaded from {path}')
+        df_pop = load(os.path.join(abs_path, "../data/population_total.csv"))
+        df_gdp = load(os.path.join(abs_path,
+                                   "../data/income_per_person_gdppercapita_ppp_\
+inflation_adjusted.csv"))
 
-        # check if country exists in dataframe
-        if (test_country not in df['country'].values or
-                compare_country not in df['country'].values):
-            raise TypeError(f'{test_country} or {compare_country} could not\
-                             be found in Dataset')
+        if df_pop is None:
+            raise RuntimeError('Data could not be loaded from population csv')
 
-        # select and export corresponding row
-        test_country_data = df[df['country'] == test_country]
-        compare_country_data = df[df['country'] == compare_country]
+        if df_gdp is None:
+            raise RuntimeError('Data could not be loaded from gdp csv')
 
-        # check if all values of the dataset are NaN
-        if (pd.isna(test_country_data.values[0][1:]).all() or
-                pd.isna(compare_country_data.values[0][1:]).all()):
-            raise TypeError('No data available')
+        # Convert column values to list to make sure year value is available
+        years = df_pop.columns.to_list()
+        if year not in years:
+            raise ValueError(f'{year} not found in population dataset')
 
-        # create list of years to plot
-        years = list()
-        years.extend(range(1800, 2051))
-        data_range = len(years)
+        years = df_gdp.columns.to_list()
+        if year not in years:
+            raise ValueError(f'{year} not found in gdp dataset')
 
-        # Turn values to list
-        test_country_pop = test_country_data.values.tolist()
-        compare_country_pop = compare_country_data.values.tolist()
+        # select and export corresponding columns
+        fused_df = pd.DataFrame({'Country': df_pop['country'].tolist(),
+                                   'Population': df_pop[year].tolist(),
+                                   'GDP': df_gdp[year].tolist()})
 
-        # Slice country name element into a variable
-        country_names = list()
-        country_names.append(test_country_pop[0][0])
-        country_names.append(compare_country_pop[0][0])
-
-        # Turn list to numpy array
-        test_country_pop = np.array(test_country_pop)
-        compare_country_pop = np.array(compare_country_pop)
-
-        # Flatten list from 2D to 1D array
-        test_country_pop = test_country_pop.flatten()
-        test_country_pop = test_country_pop.tolist()
-        test_country_pop = test_country_pop[0: data_range + 1]
-
-        compare_country_pop = compare_country_pop.flatten()
-        compare_country_pop = compare_country_pop.tolist()
-        compare_country_pop = compare_country_pop[0: data_range + 1]
+        print(fused_df)
 
         # Slice country name from the list)
-        unpck = unpack_numbers()
-        test_country_pop = [unpck(pop) for pop in test_country_pop[1:]]
-        compare_country_pop = [unpck(pop) for pop in compare_country_pop[1:]]
+        # unpck = unpack_numbers()
+        # test_country_pop = [unpck(pop) for pop in test_country_pop[1:]]
+        # compare_country_pop = [unpck(pop) for pop in compare_country_pop[1:]]
 
         # Making new dataframe with cleaned data
-        cleaned_data = pd.DataFrame({'Year': years,
-                                    country_names[0]: test_country_pop,
-                                    country_names[1]: compare_country_pop})
+        # cleaned_data = pd.DataFrame({'Year': years,
+        #                            country_names[0]: test_country_pop,
+        #                            country_names[1]: compare_country_pop})
 
         # Convert the dataframe from wide to long format
-        pop_over_years = pd.melt(cleaned_data, id_vars=['Year'],
-                                 value_vars=[country_names[0],
-                                             country_names[1]],
-                                 var_name="Country",
-                                 value_name="Population")
+        # pop_over_years = pd.melt(cleaned_data, id_vars=['Year'],
+        #                         value_vars=[country_names[0],
+        #                                     country_names[1]],
+        #                         var_name="Country",
+        #                         value_name="Population")
 
-        print(pop_over_years)
-        render_plot(pop_over_years, country_names)
+        #print(pop_over_years)
+        #render_plot(pop_over_years, country_names)
 
     except Exception as e:
         print(f'Exception: {e}')
