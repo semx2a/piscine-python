@@ -160,5 +160,5 @@ inflation_adjusted.csv"))
 
         render_plot(df_life_gdp, year)
 
-    except Exception as e:
-        print(f'Exception: {e}')
+    except Exception:
+        raise

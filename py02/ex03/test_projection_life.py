@@ -20,7 +20,9 @@ def test_gdp_life_expectancy_runs_without_errors(year):
 
 @pytest.mark.parametrize('year', [
     '-1',
-    '2051'
+    '2051',
+    1995
 ])
 def test_gdp_life_expectancy_no_entry(year):
-    assert gdp_life_expectancy(year) is None
+    with pytest.raises(Exception):
+        assert gdp_life_expectancy(year) is None
