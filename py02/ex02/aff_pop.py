@@ -199,5 +199,5 @@ def population_total(test_country: str, compare_country: str) -> None:
         print(pop_over_years)
         render_plot(pop_over_years, country_names)
 
-    except Exception as e:
-        print(f'Exception: {e}')
+    except Exception:
+        raise

@@ -16,7 +16,9 @@ def test_population_total_runs_without_errors(country1, country2):
 
 
 @pytest.mark.parametrize('country1, country2', [
-    ('Isnotreal', 'Palestine')
+    ('Is not real', 'Does not Exist'),
+    (1, 2)
 ])
 def test_population_total_no_entry(country1, country2):
-    assert population_total(country1, country2) is None
+    with pytest.raises(Exception):
+        assert population_total(country1, country2) is None

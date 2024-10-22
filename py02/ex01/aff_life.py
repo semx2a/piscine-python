@@ -95,5 +95,5 @@ def life_expectancy(country: str) -> None:
         # show plot
         plt.show()
 
-    except Exception as e:
-        print(f'Exception: {e}')
+    except Exception:
+        raise

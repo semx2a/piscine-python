@@ -20,7 +20,9 @@ def test_life_expectancy_runs_without_errors(country):
 
 
 @pytest.mark.parametrize('country', [
-    'Isnotreal'
+    'Isnotreal',
+    1
 ])
 def test_life_expectancy_no_entry(country):
-    assert life_expectancy(country) is None
+    with pytest.raises(Exception):
+        assert life_expectancy(country) is None
