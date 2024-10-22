@@ -16,7 +16,7 @@ def unpack_numbers():
     abbreviated numbers forms (k, m, b) into integers
     """
     return (lambda x: int(float(x[0:-1]) * tens[x[-1].lower()]) if
-            x[-1].isalpha() else int(x))
+            not isinstance(x, int) and x[-1].isalpha() else int(x))
 
 
 # format y axis to show numbers in thousands, millions, or billions

@@ -33,3 +33,7 @@ For this reason, any other file will be considered invalid, resulting in the fun
 
 ## References
 
+- [Compare two DataFrames with different size](https://stackoverflow.com/questions/44414876/compare-two-pandas-dataframe-with-different-size)
+- [Pandas merge](https://pandas.pydata.org/docs/reference/api/pandas.merge.html)
+- [Get list of pandas dataframe columns based on data types](https://stackoverflow.com/questions/22470690/get-list-of-pandas-dataframe-columns-based-on-data-type)
+- [Pandas scatterplot](https://seaborn.pydata.org/generated/seaborn.scatterplot.html)

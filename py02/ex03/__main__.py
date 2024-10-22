@@ -1,13 +1,13 @@
 import sys
 import os
 
-from aff_pop import population_total
+from projection_life import gdp_life_expectancy
 
 
 def main(av):
     try:
-        assert len(av) == 3, "usage: __main__.py 'country_name'"
-        population_total(av[1], av[2])
+        assert len(av) == 2, "usage: __main__.py 'year'"
+        gdp_life_expectancy(av[1])
     except Exception as e:
         print(f"Exception: {e}")
         return 1

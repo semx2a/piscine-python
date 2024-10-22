@@ -1,22 +1,26 @@
 import pytest
-from aff_pop import population_total
+from projection_life import gdp_life_expectancy
 
 
-@pytest.mark.parametrize('country1, country2', [
-    ('France', 'Germany'),
-    ('Armenia', 'Greece'),
-    ('Bolivia', 'Chile'),
-    ('Haiti', 'Dominican Republic'),
-    ('Libya', 'Egypt'),
-    ('Russia', 'United States'),
-    ('China', 'India')
+@pytest.mark.parametrize('year', [
+    '1900',
+    '1920',
+    '1929',
+    '1939',
+    '1945',
+    '1960',
+    '1995',
+    '2010',
+    '2024',
+    '2050'
 ])
-def test_population_total_runs_without_errors(country1, country2):
-    assert population_total(country1, country2) is None
+def test_gdp_life_expectancy_runs_without_errors(year):
+    assert gdp_life_expectancy(year) is None
 
 
-@pytest.mark.parametrize('country1, country2', [
-    ('Isnotreal', 'Palestine')
+@pytest.mark.parametrize('year', [
+    '-1',
+    '2051'
 ])
-def test_population_total_no_entry(country1, country2):
-    assert population_total(country1, country2) is None
+def test_gdp_life_expectancy_no_entry(year):
+    assert gdp_life_expectancy(year) is None
