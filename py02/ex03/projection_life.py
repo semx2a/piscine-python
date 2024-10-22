@@ -1,5 +1,4 @@
 import os
-import numpy as np
 import pandas as pd
 import seaborn as sns
 from matplotlib import pyplot as plt
@@ -40,19 +39,19 @@ def format_func(value, ticks):
 def find_base(min: any, max: any) -> int:
     """
     find base is a small utility function that takes two values representing
-    min and max values from a dataset, and returns a base to format the ticks 
+    min and max values from a dataset, and returns a base to format the ticks
     interval of a plot.
     """
     range = max - min
 
     match range:
-        case _ if range >= 2e5:
+        case _ if range >= 2e5:  # ie 200k
             return 50000
-        case _ if range >= 1e5:
+        case _ if range >= 1e5:  # ie 100k
             return 20000
-        case _ if range >= 5e4:
+        case _ if range >= 5e4:  # ie 50k
             return 10000
-        case _ if range >= 1e4:
+        case _ if range >= 1e4:  # ie 10k
             return 5000
         case _:
             return 2000
@@ -117,7 +116,8 @@ def gdp_life_expectancy(year: str) -> None:
     try:
         abs_path = os.path.dirname(os.path.abspath(__file__))
 
-        df_life = load(os.path.join(abs_path, "../data/life_expectancy_years.csv"))
+        df_life = load(os.path.join(abs_path,
+                                    "../data/life_expectancy_years.csv"))
         df_gdp = load(os.path.join(abs_path,
                                    "../data/income_per_person_gdppercapita_ppp_\
 inflation_adjusted.csv"))

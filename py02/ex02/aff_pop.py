@@ -46,19 +46,19 @@ def find_base(min_population: any, max_population: any) -> int:
     range_population = max_population - min_population
 
     match range_population:
-        case _ if range_population >= 1e9:
+        case _ if range_population >= 1e9:  # ie 1B
             return 200000000
-        case _ if range_population >= 2e8:
+        case _ if range_population >= 2e8:  # ie 200M
             return 50000000
-        case _ if range_population >= 1e8:
+        case _ if range_population >= 1e8:  # ie 100M
             return 20000000
-        case _ if range_population >= 2e7:
+        case _ if range_population >= 2e7:  # ie 20M
             return 20000000
-        case _ if range_population >= 1e7:
+        case _ if range_population >= 1e7:  # ie 10M
             return 3000000
-        case _ if range_population >= 1e6:
+        case _ if range_population >= 1e6:  # ie 1M
             return 200000
-        case _ if range_population >= 1e5:
+        case _ if range_population >= 1e5:  # ie 10k
             return 20000
         case _:
             return 2000

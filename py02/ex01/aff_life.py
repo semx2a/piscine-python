@@ -28,7 +28,7 @@ def life_expectancy(country: str) -> None:
     """
     try:
         path = (os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                             '../data/population_total.csv'))
+                             '../data/life_expectancy_years.csv'))
         df = load(path)
 
         if df is None:

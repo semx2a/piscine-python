@@ -9,7 +9,7 @@
 
 ## gdp_life_expectancy()
 
-The `gdp_life_expectancy()` function calls the load function , loads the `income_per_person_gdppercapita_ppp_inflation_adjusted.csv` and `life_expectancy.csv` files, and displays the projection of life expectancy in relation to the gross national product of the year 1900 for all countries.
+The `gdp_life_expectancy()` function calls the load function , loads the `income_per_person_gdppercapita_ppp_inflation_adjusted.csv` and `life_expectancy_years.csv` files, and displays the projection of life expectancy in relation to the gross national product of the year 1900 for all countries.
 
 ### gdp_life_expectancy() Syntax
 
@@ -28,7 +28,7 @@ The `gdp_life_expectancy()` function takes a parameter year that is a string con
 
 ## notes about the loaded data
 
-The exercise explicitely states that the loaded files should be `income_per_person_gdppercapita_ppp_inflation_adjusted.csv` and `life_expectancy.csv`.
+The exercise explicitely states that the loaded files should be `income_per_person_gdppercapita_ppp_inflation_adjusted.csv` and `life_expectancy_years.csv`.
 For this reason, any other file will be considered invalid, resulting in the function's behavior being undefined.
 
 ## References
