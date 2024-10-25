@@ -2,18 +2,16 @@
 
 ## Description
 
-You must provide the following elements in your code: 
+You must provide the following elements in your code:
 
-- An **abstract** class `character` which can takes the following parameters:
-  - `first_name`
-  - `is_alive : Bool` (default is True, optional argument)
-  - a method `die` which sets `is_alive` to False
-- A class `Stark` which inherits from `character`
+Create two families that inherit from the Character class, that we can instantiate without going through the Character class.
 
-Each method must have a docstring.
+Find a solution so that "__str__" and "__repr__" return strings and not objects.
+
+Write a Class method to create Lannister characters in a chain.
 
 ## References
 
-- [Abstract class](https://www.pythoncheatsheet.org/cheatsheet/oop-basics#abstraction)
-- [Python OOP Basics](https://www.pythoncheatsheet.org/cheatsheet/oop-basics)
-- [Python functions optional arguments](https://realpython.com/python-optional-arguments/)
+- [Not including init in the class definition](https://python-forum.io/thread-34797.html)
+- [Python class method explained with examples](https://pynative.com/python-class-method/)
+- [Python __repr__ vs __str__](https://realpython.com/python-repr-vs-str/)

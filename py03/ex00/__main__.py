@@ -1,5 +1,5 @@
 from S1E9 import Stark
-# from S1E9 import Character
+from S1E9 import Character
 
 Ned = Stark("Ned")
 print(Ned.__dict__)
@@ -15,4 +15,4 @@ print("---")
 Lyanna = Stark("Lyanna", False)
 print(Lyanna.__dict__)
 
-# Hodor = Character("Hodor")
+Hodor = Character("Hodor")

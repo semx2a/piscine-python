@@ -5,11 +5,12 @@ class Character(ABC):
     """I am an Abstract Character"""
     @abstractmethod
     def __init__(self, first_name: str, is_alive=True) -> None:
-        pass
+        self.first_name = first_name
+        self.is_alive = is_alive
 
     @abstractmethod
     def die(self) -> None:
-        pass
+        self.is_alive = False
 
 
 class Stark(Character):
@@ -24,11 +25,10 @@ class Stark(Character):
         -`first_name` (str): The first name of the character as a string
         - `is_alive` (bool, optional): a bool var set to True by default
         """
-        self.first_name = first_name
-        self.is_alive = is_alive
+        super().__init__(first_name, is_alive)
 
     def die(self) -> None:
         """
         `die` method sets the `is_alive` variable to false.
         """
-        self.is_alive = False
+        super().die()
