@@ -10,7 +10,7 @@ print(Ned.is_alive)
 print(Ned.__doc__)
 print(Ned.__init__.__doc__)
 print(Ned.die.__doc__)
-
+print(Ned.__str__)
 print("---")
 
 Lyanna = Stark("Lyanna", False)

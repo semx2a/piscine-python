@@ -1,14 +1,12 @@
-# Exercise 01: GOT S1E7
+# Exercise 02: DiamondTrap
 
 ## Description
 
 You must provide the following elements in your code:
 
-Create two families that inherit from the Character class, that we can instantiate without going through the Character class.
-
-Find a solution so that "__str__" and "__repr__" return strings and not objects.
-
-Write a Class method to create Lannister characters in a chain.
+In this exercise, you will create Joffrey Baratheon.
+There is something inconsistent with this new king.
+You must use the Properties to change the physical characteristics of our new king.
 
 ## References
 
