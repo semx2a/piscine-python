@@ -1,26 +1,22 @@
-# Exercise 02: dataclass
+# Exercise 02: Call Limit
 
 ## Description
 
-Allowed functions: `dataclasses`, `random`, `string`
+Write a function that takes as argument a call limit of another function and blocks its execution above a limit.
 
-Write a dataclass with the following requirements:
-
-- it take a name and nickname as arguments
-- set active to True
-- create the student login
-- generate a random ID with the generate_id function.
-
-__str__ , __repr__ are not allowed for this exercise.
-
-Exepected output (id is random):
+Expected output:
 
 ```bash
 $> python tester.py
-Student(name='Edward', surname='agle', active=True, login='Eagle', id='trannxhndgtolvh')
+f()
+g()
+f()
+Error: <function g at 0x7fabdc243ee0> call too many times
+f()
+Error: <function g at 0x7fabdc243ee0> call too many times
 $>
 ```
 
 ## References
 
-- [Python Dataclasses](https://www.pythoncheatsheet.org/cheatsheet/dataclasses)
+- [python wrapper function taking arguments inside decorator](https://stackoverflow.com/questions/30904486/python-wrapper-function-taking-arguments-inside-decorator)
