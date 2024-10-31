@@ -2,7 +2,7 @@
 
 ## Description
 
-You must provide the following elements in your code: 
+You must provide the following elements in your code:
 
 - An **abstract** class `character` which can takes the following parameters:
   - `first_name`
