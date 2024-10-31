@@ -12,8 +12,14 @@ You must provide the following elements in your code:
 
 Each method must have a docstring.
 
+## Design choices
+
+I chose to make the `__init__` method of the `Character` class abstract.
+The rationale behind this decision is this method is the one most prone to change, and it is the one that is most likely to be overridden by a subclass.
+
 ## References
 
 - [Abstract class](https://www.pythoncheatsheet.org/cheatsheet/oop-basics#abstraction)
 - [Python OOP Basics](https://www.pythoncheatsheet.org/cheatsheet/oop-basics)
 - [Python functions optional arguments](https://realpython.com/python-optional-arguments/)
+- [Python super](https://realpython.com/python-super/)

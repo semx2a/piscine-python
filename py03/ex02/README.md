@@ -10,6 +10,4 @@ You must use the Properties to change the physical characteristics of our new ki
 
 ## References
 
-- [Not including init in the class definition](https://python-forum.io/thread-34797.html)
-- [Python class method explained with examples](https://pynative.com/python-class-method/)
-- [Python __repr__ vs __str__](https://realpython.com/python-repr-vs-str/)
+- [Resolving Diamond Inheritance within Python Classes](https://stackoverflow.com/questions/46199975/resolving-diamond-inheritance-within-python-classes)

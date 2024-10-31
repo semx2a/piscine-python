@@ -7,7 +7,7 @@ class Baratheon(Character):
         family_name (str): The family name, "Baratheon".
         eyes (str): The eye color of the family.
         hairs (str): The hair color of the family."""
-    
+
     def __init__(self, first_name: str, is_alive: bool = True) -> None:
         """Class Constructor
         Parameters:
@@ -43,4 +43,3 @@ class Lannister(Character):
     @classmethod
     def create_lannister(cls, first_name, is_alive=True):
         return cls(first_name, is_alive)
-
