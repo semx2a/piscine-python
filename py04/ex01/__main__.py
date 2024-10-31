@@ -7,31 +7,41 @@ def hello(x):
     pass
 
 
-my_counter = outer(3, square)
-print(my_counter())
-print(my_counter())
-print(my_counter())
-print("---")
+def main():
+    try:
 
-another_counter = outer(1.5, pow)
-print(another_counter())
-print(another_counter())
-print(another_counter())
+        my_counter = outer(3, square)
+        print(my_counter())
+        print(my_counter())
+        print(my_counter())
+        print("---")
 
-print("---")
-wrong_func = outer(3, hello)
-print(wrong_func())
-print(wrong_func())
-print(wrong_func())
+        another_counter = outer(1.5, pow)
+        print(another_counter())
+        print(another_counter())
+        print(another_counter())
 
-print("---")
-wrong_func1 = outer(3, "hello")
-print(wrong_func1())
-print(wrong_func1())
-print(wrong_func1())
+        print("---")
+        wrong_func = outer(3, hello)
+        print(wrong_func())
+        print(wrong_func())
+        print(wrong_func())
 
-print("---")
-zero_count = outer(0, pow)
-print(zero_count())
-print(zero_count())
-print(zero_count())
+        print("---")
+        wrong_func1 = outer(3, "hello")
+        print(wrong_func1())
+        print(wrong_func1())
+        print(wrong_func1())
+
+        print("---")
+        zero_count = outer(0, pow)
+        print(zero_count())
+        print(zero_count())
+        print(zero_count())
+
+    except Exception as e:
+        print(f"Exception: {e}")
+
+
+if __name__ == "__main__":
+    main()
