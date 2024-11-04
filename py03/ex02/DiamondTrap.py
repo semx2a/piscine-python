@@ -10,7 +10,7 @@ class King(Baratheon, Lannister):
             first_name (str): The first name of the character.
             is_alive (bool, optional): Whether the character is alive.
             Defaults to True."""
-        Baratheon.__init__(self, first_name, is_alive)
+        super().__init__(first_name, is_alive)
 
     def set_eyes(self, eyes):
         """eye setter method"""
