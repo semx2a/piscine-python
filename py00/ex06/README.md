@@ -5,7 +5,7 @@
 Allowed functions: sys or any other library that allows you to receive args
 
 **Part 1:**
-Recode your own ft_filter, it should behave like the original built-in function (it should return the same thing as "print(filter.__doc__)"), you should use list comprehensions to recode your ft_filter.
+Recode your own ft_filter, it should behave like the original built-in function (it should return the same thing as `print(filter.__doc__)`, you should use list comprehensions to recode your ft_filter.
 
 >Of course using the original filter built-in is forbidden
 
