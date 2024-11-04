@@ -10,11 +10,65 @@ Each exercise comes with its own tester (if applicable) and a `README.md` to hel
 
 The exercises are divided into 4 main "days":
 
-- Day 00: Start
-- Day 01: Arrays
-- Day 02: DataTable
-- Day 03: OOP
-- Day 04: Dod
+### [Day 00: Start](./py00)
+
+This day is an introduction to Python and its basic syntax. It covers the following topics:
+
+- Variables
+- Data Types
+- Operators
+- Control Structures
+- Functions
+- Generators
+- Modules
+- Libraries
+- Virtual Environments
+- Pip
+
+### [Day 01: Arrays](./py01)
+
+This day is an introduction to Arrays and how to use them in Python. It covers the following topics:
+
+- Lists
+- List Comprehensions
+- NumPy Arrays
+- Multiple dimensions arrays
+- Slicing
+- Image Processing with NumPy, Matplotlib and PIL
+
+### [Day 02: DataTables](./py02)
+
+This day is an introduction to DataFrames and how to use them in Python. It covers the following topics:
+
+- Pandas DataFrames
+- Data Cleaning
+- Data Manipulation
+- Data Visualization
+- Plots with Matplotlib and Seaborn
+
+### [Day 03: OOP - Object Oriented Programming](./py03)
+
+This day is an introduction to Object Oriented Programming in Python. It covers the following topics:
+
+- Classes
+- Inheritance
+- Encapsulation
+- Polymorphism
+- Magic Methods
+- Decorators
+- Abstract Classes
+- Special Methods (Dunder Methods)
+
+
+### [Day 04: Dod - Data Oriented Design](./py04/)
+
+This day is an introduction to Data Oriented Design in Python. It covers the following topics:
+
+- Nested Functions
+- Wrapper Functions
+- Data Classes
+- Immutable Data Structures
+
 
 ## References
 

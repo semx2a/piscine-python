@@ -105,7 +105,7 @@ def ft_statistics(*args: any, **kwargs: any) -> None:
     - Args (any): Arguments are integers or floats
     - Key-Value arguments: Keys containing the name of an operation to perform
     """
-    args_list = [arg for arg in args]
+    args_list = [   arg for arg in args]
     args_list.sort()
     arg_len = len(args_list) - 1
 
@@ -126,4 +126,4 @@ def ft_statistics(*args: any, **kwargs: any) -> None:
             case _ if value == 'var':
                 variance(args_list, arg_len)
             case _:
-                print("ERROR")
+                pass
