@@ -91,6 +91,8 @@ def ft_statistics(*args: any, **kwargs: any) -> None:
     arg_len = len(args_list) - 1
 
     values = [value for key, value in kwargs.items()]
+    if not values:
+        print("ERROR")
 
     for value in values:
         match value:

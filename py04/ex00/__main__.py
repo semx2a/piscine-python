@@ -22,6 +22,14 @@ def main():
 
         ft_statistics(toto="mean", tutu="median", tata="quartile")
 
+        print("-----")
+
+        ft_statistics(toto="doesntexist", tutu="median", tata="bye")
+
+        print("-----")
+
+        ft_statistics(5, 75, 450, 18, 597, 27474, 48575)
+
     except Exception as e:
         print(f"Exception: {e}")
 
