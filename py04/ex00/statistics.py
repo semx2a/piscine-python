@@ -8,25 +8,35 @@ def median_even(length):
     return lambda args: (args[int(length/2)] + args[int((length/2) + 1)])/2
 
 
-def mean(args: list, length: int):
+def mean(args: list, length: int, is_print: bool = True):
     """mean returns the mean value of a vector"""
     if length < 1:
         print("ERROR")
         return None
 
-    return sum(args)/len(args)
+    res = sum(args)/len(args)
+
+    if is_print is True:
+        print(f'mean: {res}')
+
+    return res
 
 
-def quartile(args: list, length: int):
+def quartile(args: list, length: int, is_print: bool = True):
     """quartile returns a 1D vector containing the Q1 and Q3 of a vector"""
     if length < 1:
         print("ERROR")
         return None
 
-    return [args[int((length + 1)/4)], args[int((3 * (length + 1))/4)]]
+    res = [args[int((length + 1)/4)], args[int((3 * (length + 1))/4)]]
+
+    if is_print is True:
+        print(f'quartile: {res}')
+
+    return res
 
 
-def compute_median(args: list, length: int):
+def compute_median(args: list, length: int, is_print: bool = True):
     """compute_median implements the logic to compute the median of a vector"""
 
     if length < 1:
@@ -35,20 +45,23 @@ def compute_median(args: list, length: int):
 
     if (length + 1) % 2 == 0:
         ret = median_even(length)
-        print(f'median: {ret(args)}')
     else:
         ret = median_odd(length)
+
+    if is_print is True:
         print(f'median: {ret(args)}')
 
+    return ret
 
-def variance(args: list, length: int):
+
+def variance(args: list, length: int, is_print: bool = True):
     """variance returns the variance value of a vector"""
     if length < 1:
         print("ERROR")
         return None
 
     # find the mean in the list
-    actual_mean = mean(args, length)
+    actual_mean = mean(args, length, False)
 
     # find the difference between each entry and the mean, and square each
     # result
@@ -60,20 +73,26 @@ def variance(args: list, length: int):
     # divide the sum by the number of entries to find variance value
     var = sum_sqd / (length + 1)
 
+    if is_print is True:
+        print(f"var: {var}")
+
     return var
 
 
-def standard_deviation(args: list, length: int):
+def standard_deviation(args: list, length: int, is_print: bool = True):
     """standard_derivation returns the standard derivation value of a vecotr"""
     if length < 1:
         print("ERROR")
         return None
 
     # find the variance value
-    var = variance(args, length)
+    var = variance(args, length, False)
 
     #  take the square root
     std = var**0.5
+
+    if is_print is True:
+        print(f"std: {std}")
 
     return std
 
@@ -97,20 +116,14 @@ def ft_statistics(*args: any, **kwargs: any) -> None:
     for value in values:
         match value:
             case _ if value == 'mean':
-                ret = mean(args_list, arg_len)
-                if ret is None:
-                    continue
-                print(f'mean: {ret}')
+                mean(args_list, arg_len)
             case _ if value == 'median':
                 compute_median(args_list, arg_len)
             case _ if value == 'quartile':
-                ret = quartile(args_list, arg_len)
-                if ret is None:
-                    continue
-                print(f'quartile: {ret}')
+                quartile(args_list, arg_len)
             case _ if value == 'std':
-                print(f'std: {standard_deviation(args_list, arg_len)}')
+                standard_deviation(args_list, arg_len)
             case _ if value == 'var':
-                print(f'var: {variance(args_list, arg_len)}')
+                variance(args_list, arg_len)
             case _:
                 print("ERROR")
