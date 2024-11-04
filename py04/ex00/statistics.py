@@ -1,12 +1,15 @@
 def median_odd(length):
+    """median_odd returns the median of an odd vector"""
     return lambda args: args[int((length + 1)/2)]
 
 
 def median_even(length):
+    """median_even returns the median of an even vector"""
     return lambda args: (args[int(length/2)] + args[int((length/2) + 1)])/2
 
 
 def mean(args: list, length: int):
+    """mean returns the mean value of a vector"""
     if length < 1:
         print("ERROR")
         return None
@@ -15,6 +18,7 @@ def mean(args: list, length: int):
 
 
 def quartile(args: list, length: int):
+    """quartile returns a 1D vector containing the Q1 and Q3 of a vector"""
     if length < 1:
         print("ERROR")
         return None
@@ -23,6 +27,7 @@ def quartile(args: list, length: int):
 
 
 def compute_median(args: list, length: int):
+    """compute_median implements the logic to compute the median of a vector"""
 
     if length < 1:
         print("ERROR")
@@ -37,7 +42,7 @@ def compute_median(args: list, length: int):
 
 
 def variance(args: list, length: int):
-
+    """variance returns the variance value of a vector"""
     if length < 1:
         print("ERROR")
         return None
@@ -59,7 +64,7 @@ def variance(args: list, length: int):
 
 
 def standard_deviation(args: list, length: int):
-
+    """standard_derivation returns the standard derivation value of a vecotr"""
     if length < 1:
         print("ERROR")
         return None
@@ -74,7 +79,13 @@ def standard_deviation(args: list, length: int):
 
 
 def ft_statistics(*args: any, **kwargs: any) -> None:
+    """ft_statistics takes a list of arguments and key-value arguments and
+    calls the corresponding methods in in each key's values.
 
+    Parameters:
+    - Args (any): Arguments are integers or floats
+    - Key-Value arguments: Keys containing the name of an operation to perform
+    """
     args_list = [arg for arg in args]
     args_list.sort()
     arg_len = len(args_list) - 1
@@ -100,4 +111,4 @@ def ft_statistics(*args: any, **kwargs: any) -> None:
             case _ if value == 'var':
                 print(f'var: {variance(args_list, arg_len)}')
             case _:
-                pass
+                print("ERROR")
