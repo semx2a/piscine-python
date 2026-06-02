@@ -1,4 +1,4 @@
 matplotlib==3.9.2
 numpy==2.1.2
 Pillow==12.2.0
-pytest==8.3.3
+pytest==9.0.3
