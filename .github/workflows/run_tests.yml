@@ -1,6 +1,9 @@
 name: Pytest and flake8 
   
 on: [push]  
+
+permissions:
+  contents: read
   
 jobs:  
   build:  
